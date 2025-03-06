@@ -325,7 +325,8 @@ var _chatGptDeploymentCapacity = chatGptDeploymentCapacity != 0 ? chatGptDeploym
 @description('Embeddings model used to generate vector embeddings. Don\'t forget to check region availability.')
 // @allowed([ 'text-embedding-ada-002', 'text-embedding-3-small', 'text-embedding-3-large' ])
 param embeddingsModelName string = ''
-var _embeddingsModelName = !empty(embeddingsModelName) ? embeddingsModelName : 'text-embedding-3-large'
+//var _embeddingsModelName = !empty(embeddingsModelName) ? embeddingsModelName : 'text-embedding-3-large'
+var _embeddingsModelName = !empty(embeddingsModelName) ? embeddingsModelName : 'text-embedding-ada-002'
 
 @description('Embeddings model deployment type.')
 // @allowed([ 'Standard'])
@@ -380,7 +381,8 @@ var _searchAnalyzerName = !empty(searchAnalyzerName) ? searchAnalyzerName : 'sta
 param useSemanticReranking bool = false
 var _useSemanticReranking = useSemanticReranking != null ? useSemanticReranking : false
 
-var _searchServiceSkuName = _networkIsolation?'standard2':'standard'
+//var _searchServiceSkuName = _networkIsolation?'standard2':'standard'
+var _searchServiceSkuName = _networkIsolation? 'standard'
 
 @description('Search index name.')
 param searchIndex string = ''
