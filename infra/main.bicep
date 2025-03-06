@@ -336,7 +336,7 @@ var _embeddingsDeploymentType = !empty(embeddingsDeploymentType) ? embeddingsDep
 @description('Embeddings model version.')
 // @allowed([ '1', '2' ])
 param embeddingsModelVersion string = ''
-var _embeddingsModelVersion = !empty(embeddingsModelVersion) ? embeddingsModelVersion : '1'
+var _embeddingsModelVersion = !empty(embeddingsModelVersion) ? embeddingsModelVersion : '2'
 
 @description('Embeddings model deployment name.')
 param embeddingsDeploymentName string = ''
