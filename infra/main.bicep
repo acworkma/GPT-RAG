@@ -382,7 +382,7 @@ param useSemanticReranking bool = false
 var _useSemanticReranking = useSemanticReranking != null ? useSemanticReranking : false
 
 //var _searchServiceSkuName = _networkIsolation?'standard2':'standard'
-var _searchServiceSkuName = _networkIsolation? 'standard'
+var _searchServiceSkuName = _networkIsolation?'standard':'standard'
 
 @description('Search index name.')
 param searchIndex string = ''
